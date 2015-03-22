@@ -17,4 +17,17 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', { destDir: 'assets' });
+app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+app.import('bower_components/admin-lte/dist/css/AdminLTE.css');
+app.import('bower_components/admin-lte/dist/css/skins/_all-skins.css');
+app.import('bower_components/font-awesome/css/font-awesome.css');
+app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff', { destDir: 'fonts' });
+app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff2', { destDir: 'fonts' });
+
+app.import('bower_components/pouchdb/dist/pouchdb.js');
+app.import('bower_components/relational-pouch/dist/pouchdb.relational-pouch.js');
+app.import('bower_components/ember-pouch/dist/globals/main.js');
+
 module.exports = app.toTree();

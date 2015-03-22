@@ -1,0 +1,11 @@
+<h3>Home</h3>
+
+<p>Logged in users:</p>
+
+<ul>
+  {{#each user in model}}
+    <li>
+      {{user.name}}
+    </li>
+  {{/each}}
+</ul>
