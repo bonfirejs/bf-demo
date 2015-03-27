@@ -1,13 +1,15 @@
 <header class="main-header">
   <nav class="navbar navbar-static-top">
     <div class="container-fluid">
-    <div class="navbar-header">
-      {{#link-to "index" class="navbar-brand"}}Intel Chat{{/link-to}}
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-        <i class="fa fa-bars"></i>
-      </button>
-    </div>
-    {{render "navigation"}}
+      <div class="navbar-header">
+        {{#link-to "index" class="navbar-brand"}}Intel Chat{{/link-to}}
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        {{bf-nav}}
+      </div>
     </div>
   </nav>
 </header>
