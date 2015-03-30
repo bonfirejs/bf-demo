@@ -19,8 +19,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "bf-app": "bonfirejs/bf-app",
     "bf-box": "bonfirejs/bf-box",
-    "bf-header": "bonfirejs/bf-header",
     "broccoli-sass": "0.6.0",
     "broccoli-asset-rev": "^2.0.2",
     "ember-cli": "0.2.1",
