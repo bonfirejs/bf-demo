@@ -21,8 +21,11 @@
   "devDependencies": {
     "bf-app": "bonfirejs/bf-app",
     "bf-box": "bonfirejs/bf-box",
-    "broccoli-sass": "0.6.0",
+    "bf-grid": "bonfirejs/bf-grid",
+    "blueimp-md5": "cortex-packages/JavaScript-MD5#b36de29",
     "broccoli-asset-rev": "^2.0.2",
+    "broccoli-sass": "0.6.0",
+    "ember-browserify": "^0.6.3",
     "ember-cli": "0.2.1",
     "ember-cli-app-version": "0.3.3",
     "ember-cli-babel": "^4.0.0",
@@ -34,6 +37,7 @@
     "ember-cli-qunit": "0.3.9",
     "ember-cli-uglify": "1.0.1",
     "ember-data": "1.0.0-beta.16.1",
-    "ember-export-application-global": "^1.0.2"
+    "ember-export-application-global": "^1.0.2",
+    "ember-moment": "1.1.1"
   }
 }

@@ -15,6 +15,7 @@
     "bootstrap": "~3.3.4",
     "font-awesome": "~4.3.0",
     "admin-lte": "almasaeed2010/AdminLTE#~2.0.5",
-    "ember-pouch": "~1.2.4"
+    "ember-pouch": "~1.2.4",
+    "ember-cli-moment-shim": "~0.0.3"
   }
 }
