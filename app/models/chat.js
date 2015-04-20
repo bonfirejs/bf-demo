@@ -1,7 +1,8 @@
 import DS from 'ember-data';
+import Model from './couch';
 
-export default DS.Model.extend({
-  rev: DS.attr('string'),
-  name: DS.attr('string'),
-  message: DS.attr('string')
+export default Model.extend({
+  message: DS.attr('string'),
+  timestamp: DS.attr('number'),
+  user: DS.belongsTo('user', { async: true })
 });

@@ -2,22 +2,42 @@
 
 {{#bf-row}}
   {{#bf-col}}
+    {{#bf-box title="Login" color="success"}}
+      <form {{action "addUser" on="submit"}}>
+        <div class="box-body">
+          <div class="form-group">
+            <label for="name">Name</label>
+            {{input value=name id="name" class="form-control" placeholder="Enter name"}}
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            {{input type="email" value=email id="email" class="form-control" placeholder="Enter email"}}
+          </div>
+        </div>
+        <div class="box-footer">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
+    {{/bf-box}}
+    {{#bf-box title="Latest users" label=usersLabel color="primary"}}
+      <div class="box-body no-padding">
+        <ul class="users-list clearfix">
+          {{#each user in users}}
+            <li>
+              <img src="{{user.image}}" class="img-thumbnail">
+              <a class="users-list-name">{{user.name}}</a>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/bf-box}}
+  {{/bf-col}}
+  {{#bf-col}}
     {{#bf-box title="Direct Chat" label=chatsLabel color="warning"}}
       <div class="box-body no-padding direct-chat-warning">
         <div class="direct-chat-messages">
           {{#each chat in chats}}
-            <div class="direct-chat-msg {{if chat.user.isCurrentUser 'right'}}">
-              <div class="direct-chat-info clearfix">
-                <span class="direct-chat-name {{if chat.user.isCurrentUser 'pull-right' 'pull-left'}}">
-                  {{chat.name}}
-                </span>
-                <span class="direct-chat-timestamp {{if chat.user.isCurrentUser 'pull-left' 'pull-right'}}">
-                  {{moment chat.timestamp}}
-                </span>
-              </div>
-              <img class="direct-chat-img" src="{{chat.user.image}}" alt="message user image">
-              <div class="direct-chat-text">{{chat.message}}</div>
-            </div>
+            {{chat-item message=chat.message user=chat.user currentUser=currentUser}}
           {{/each}}
         </div>
       </div>
@@ -30,34 +50,6 @@
             </span>
           </div>
         </form>
-      </div>
-    {{/bf-box}}
-  {{/bf-col}}
-  {{#bf-col}}
-    {{#bf-box title="Login" color="success"}}
-      <div class="box-body">
-        <form>
-          <div class="form-group">
-            <label for="name">Name</label>
-            {{input value=name id="name" class="form-control" placeholder="Enter name"}}
-          </div>
-          <div class="form-group">
-            <label for="email">Email address</label>
-            {{input type="email" value=email id="email" class="form-control" placeholder="Enter email"}}
-          </div>
-        </form>
-      </div>
-    {{/bf-box}}
-    {{#bf-box title="Latest users" label=usersLabel color="primary"}}
-      <div class="box-body no-padding">
-        <ul class="users-list clearfix">
-          {{#each user in users}}
-            <li>
-              <img src="{{user.image}}" class="img-thumbnail">
-              <a class="users-list-name">{{user.name}}</a>
-            </li>
-          {{/each}}
-        </ul>
       </div>
     {{/bf-box}}
   {{/bf-col}}

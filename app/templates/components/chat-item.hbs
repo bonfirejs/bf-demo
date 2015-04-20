@@ -1,0 +1,27 @@
+{{#if (eq user.id currentUser.id)}}
+  <div class="direct-chat-msg right">
+    <div class="direct-chat-info clearfix">
+      <span class="direct-chat-name pull-right">
+        {{user.name}}
+      </span>
+      <span class="direct-chat-timestamp pull-left">
+        {{moment timestamp}}
+      </span>
+    </div>
+    <img class="direct-chat-img" src="{{user.image}}">
+    <div class="direct-chat-text">{{message}}</div>
+  </div>
+{{else}}
+  <div class="direct-chat-msg">
+    <div class="direct-chat-info clearfix">
+      <span class="direct-chat-name pull-left">
+        {{user.name}}
+      </span>
+      <span class="direct-chat-timestamp pull-right">
+        {{moment timestamp}}
+      </span>
+    </div>
+    <img class="direct-chat-img" src="{{user.image}}">
+    <div class="direct-chat-text">{{message}}</div>
+  </div>
+{{/if}}
