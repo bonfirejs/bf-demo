@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'hello',
+    modulePrefix: 'bf-demo',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

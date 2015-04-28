@@ -1,7 +1,7 @@
 {
-  "name": "hello",
-  "version": "0.0.0",
-  "description": "Small description for hello goes here",
+  "name": "bf-demo",
+  "version": "0.0.1",
+  "description": "",
   "private": true,
   "directories": {
     "doc": "doc",
