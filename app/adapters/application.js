@@ -1,5 +1,6 @@
-var remote = new window.PouchDB('http://localhost:5984/hello');
-var db = new window.PouchDB('hello');
+// TODO: Create remote database if necessary
+var remote = new window.PouchDB('http://localhost:4200/db/bonfire');
+var db = new window.PouchDB('bonfire');
 
 window.PouchDB.debug.enable('*');
 

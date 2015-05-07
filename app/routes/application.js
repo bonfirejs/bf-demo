@@ -6,7 +6,7 @@ export default Ember.Route.extend({
     window.route = this;
     window.store = this.store;
     window.clearDB = function() {
-      window.indexedDB.deleteDatabase('_pouch_hello');
+      window.indexedDB.deleteDatabase('_pouch_bonfire');
       window.indexedDB.deleteDatabase('_pouch_local_pouch');
     };
   }

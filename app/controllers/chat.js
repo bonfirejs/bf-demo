@@ -18,7 +18,6 @@ export default Ember.ArrayController.extend({
         email: this.get('email'),
       });
       user.save().then(user => {
-        console.log('user:', user);
         this.set('currentUser', user);
       }).catch(reason => {
         window.console.log('Error saving user', reason);
