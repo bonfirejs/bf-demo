@@ -23,17 +23,17 @@ export default Ember.ArrayController.extend({
         window.console.log('Error saving user', reason);
       });
     },
-    sendMessage: function() {
+    sendMessage: function(bfChat) {
       var user = this.store.all('user').filterBy('email', this.get('email')).get('firstObject');
       var chat = this.store.createRecord('chat', {
         name: this.get('name'),
-        message: this.get('message'),
+        message: bfChat.get('message'),
         timestamp: Date.now(),
         user: user
       });
       chat.save().then(() => {
-        this.set('message', '');
-        Ember.$('.direct-chat-messages .direct-chat-msg:last-child').get(0).scrollIntoView();
+        bfChat.set('message', '');
+        Ember.$('.direct-chat-messages .direct-chat-msg:last').get(0).scrollIntoView();
       }).catch(reason => {
         window.console.log('Error sending message', reason);
       });

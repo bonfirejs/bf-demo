@@ -21,6 +21,7 @@
   "devDependencies": {
     "bf-app": "bonfirejs/bf-app",
     "bf-box": "bonfirejs/bf-box",
+    "bf-chat": "bonfirejs/bf-chat",
     "bf-grid": "bonfirejs/bf-grid",
     "bf-server": "bonfirejs/bf-server",
     "blueimp-md5": "cortex-packages/JavaScript-MD5#b36de29",
